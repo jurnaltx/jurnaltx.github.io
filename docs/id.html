@@ -77,7 +77,13 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 nav{display:flex;gap:22px;font:500 .95rem var(--head)}
 nav a{text-decoration:none;color:var(--mute)}
 nav a:hover{color:var(--text)}
-@media(max-width:640px){nav a:not(.gh){display:none}}
+.logonya svg{width: 42.000000pt;}
+.tekslogonya svg{width: 125.000000pt;}
+@media(max-width:640px){
+  nav a:not(.gh){display:none}
+  .logonya svg{width: 35.000000pt;padding-top: 1px;}
+  .tekslogonya svg{width: 100.000000pt;padding-top: 3px;}
+}
 
 .btn{display:inline-block;font:700 1rem var(--head);padding:13px 24px;border-radius:10px;text-decoration:none;border:1px solid var(--red2);background:var(--red2);color:#faebd7;transition:box-shadow .25s,background .25s}
 .btn:hover{background:var(--red);box-shadow:0 0 22px color-mix(in srgb,var(--red) 55%,transparent)}
@@ -144,6 +150,12 @@ pre .c{color:var(--mute)}
 .co b{display:block;font:700 .95rem var(--head);color:var(--c)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .chips span{font:500 .85rem var(--mono);border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--mute)}
+@media(max-width:520px){
+  .ilang{display: none;}
+  table{width: 99%;}
+  .callouts{width: 99%;}
+  pre{width: 99%; font-size: small;}
+}
 
 /* performa */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
@@ -364,13 +376,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="syn">
       <div>
         <table>
-          <tr><th>Format</th><th>Sintaks</th><th>Hasil</th></tr>
-          <tr><td>Tebal</td><td><code>**Teks**</code></td><td><b>Teks</b></td></tr>
-          <tr><td>Miring</td><td><code>*Teks*</code></td><td><i>Teks</i></td></tr>
-          <tr><td>Tebal miring</td><td><code>***Teks***</code></td><td><b><i>Teks</i></b></td></tr>
-          <tr><td>Garis bawah</td><td><code>&lt;ins&gt;Teks&lt;/ins&gt;</code></td><td><ins>Teks</ins></td></tr>
-          <tr><td>Pangkat atas</td><td><code>2&lt;sup&gt;2&lt;/sup&gt;</code></td><td>2<sup>2</sup></td></tr>
-          <tr><td>Pangkat bawah</td><td><code>2&lt;sub&gt;2&lt;/sub&gt;</code></td><td>2<sub>2</sub></td></tr>
+          <tr><th class="ilang">Format</th><th>Sintaks</th><th>Hasil</th></tr>
+          <tr><td class="ilang">Tebal</td><td><code>**Teks**</code></td><td><b>Teks</b></td></tr>
+          <tr><td class="ilang">Miring</td><td><code>*Teks*</code></td><td><i>Teks</i></td></tr>
+          <tr><td class="ilang">Tebal miring</td><td><code>***Teks***</code></td><td><b><i>Teks</i></b></td></tr>
+          <tr><td class="ilang">Garis bawah</td><td><code>&lt;ins&gt;Teks&lt;/ins&gt;</code></td><td><ins>Teks</ins></td></tr>
+          <tr><td class="ilang">Pangkat atas</td><td><code>2&lt;sup&gt;2&lt;/sup&gt;</code></td><td>2<sup>2</sup></td></tr>
+          <tr><td class="ilang">Pangkat bawah</td><td><code>2&lt;sub&gt;2&lt;/sub&gt;</code></td><td>2<sub>2</sub></td></tr>
         </table>
         <div class="callouts">
           <div class="co" style="--c:var(--blue)"><b>CATATAN</b>Alert ditulis dengan <code>&gt;[!CATATAN]</code> di baris pertama.</div>
