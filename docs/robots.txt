@@ -1,0 +1,8 @@
+# robots.txt untuk https://jurnaltx.github.io
+# Mengizinkan semua bot mesin pencari merayapi seluruh situs
+
+User-agent: *
+Allow: /
+
+# Lokasi sitemap
+Sitemap: https://jurnaltx.github.io/sitemap.xml
