@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JurnalTX: Aplikasi Desktop Jurnal dan Catatan dengan Markdown</title>
-<meta name="description" content="JurnalTX adalah aplikasi jurnal dan catatan desktop native dengan format Markdown, link antar catatan, upload file, dan pencarian cepat. Ringan: sekitar 50 MB RAM.">
+<meta name="description" content="JurnalTX adalah aplikasi jurnal dan catatan desktop native dengan format Markdown, link antar catatan, orphan file purge and detections. upload file, dan pencarian cepat. Ringan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
   "name": "JurnalTX",
   "applicationCategory": "ProductivityApplication",
   "operatingSystem": "Linux, Windows",
-  "softwareVersion": "1.1.0",
+  "softwareVersion": "1.2.0",
   "description": "Free desktop app for journaling and note taking, with Markdown, note links, and file uploads.",
   "url": "https://jurnaltx.github.io/id.html",
   "inLanguage": ["en", "id"],
@@ -278,7 +278,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <h1>Jurnal harian dan catatan, tersimpan sebagai file Markdown.</h1>
       <p class="lead">Catat, lampirkan file, dan semuanya tetap berupa file <code>.md</code> milik Anda.<br>Gratis dan Personal.</p>
       <div class="cta">
-        <a class="btn" href="#download">Unduh versi 1.1.0</a>
+        <a class="btn" href="#download">Unduh versi 1.2.0</a>
         <a class="btn alt" href="#fitur">Lihat fitur</a>
       </div>
       <p class="hint">Aplikasi Desktop. Bukan aplikasi berbasis browser. <br>Tersedia untuk Linux dan Windows.</p>
@@ -350,7 +350,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="items">
         <div><h4>Satu halaman per tanggal</h4><p>Saat dibuka, JurnalTX menampilkan jurnal hari ini. Setiap tanggal punya halamannya sendiri.</p></div>
         <div><h4>Kalender jurnal</h4><p>Tanggal yang sudah berisi teks diberi tanda. Ikon kalender bisa diganti dengan gambar PNG Anda.</p></div>
-        <div><h4>Scrapping Text <small>(1.1.0)</small></h4><p>Cari teks di seluruh jurnal dan catatan, lalu klik hasilnya untuk langsung menuju bagian tersebut.</p></div>
+        <div><h4>Scrapping Text <small>(1.2.0)</small></h4><p>Cari teks di seluruh jurnal dan catatan, lalu klik hasilnya untuk langsung menuju bagian tersebut.</p></div>
         <div><h4>Rename dan Hapus</h4><p>Klik kanan catatan di sidebar untuk mengganti judul atau menghapusnya.</p></div>
       </div>
     </div>
@@ -364,7 +364,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div><h4>Tema kustom</h4><p>Tambahkan tema XML GtkSourceView sendiri ke <code>gtksourceview-5/styles</code>.</p></div>
       </div>
     </div>
+
+    <div class="grp">
+      <h3>Fitur baru</h3>
+      <ol>
+        <li>
+          Deteksi file tak tertaut.
+        </li>
+        <li>
+          Pembersian atau penghapusan massal catatan yang tak tertaut (orphan files).
+        </li>
+        <li>
+          Pemusatan Tugas / Task belum selesai dari seluruh Cataan dan Jurnal.
+        </li>
+        <li>
+          Pemutar Lagu.
+        </li>
+      </ol>
+    </div>
   </div>
+
+  
 </section>
 
 <section id="sintaks">
@@ -458,7 +478,7 @@ sudo apt update
 
 <footer>
   <div class="wrap">
-    <span>JurnalTX V1.1.0</span>
+    <span>JurnalTX V1.2.0</span>
     <a href="https://github.com/mrc24tx">mrc24tx</a>
   </div>
 </footer>
