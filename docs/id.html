@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JurnalTX: Aplikasi Desktop Jurnal dan Catatan dengan Markdown</title>
-<meta name="description" content="JurnalTX adalah aplikasi jurnal dan catatan desktop native dengan format Markdown, link antar catatan, orphan file purge and detections. upload file, dan pencarian cepat. Ringan.">
+<meta name="description" content="JurnalTX adalah aplikasi jurnal dan catatan desktop native dengan format Markdown, link antar catatan, deteksi dan pembersihan file tak tertaut (orphan), upload file, dan pencarian cepat. Ringan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@ nav a:hover{color:var(--text)}
 section{padding:84px 0;border-top:1px solid var(--line)}
 .sec-h{max-width:34em;margin-bottom:46px}
 .sec-h h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800}
-.sec-h p{color:var(--mute);margin:14px 0 0}
+.sec-h p, .sec-h li{color:var(--mute);margin:14px 0 0}
 
 /* fitur: baris dengan judul grup di kiri */
 .grp{display:grid;grid-template-columns:240px 1fr;gap:12px 48px;padding:34px 0;border-top:1px solid var(--line)}
@@ -364,27 +364,36 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div><h4>Tema kustom</h4><p>Tambahkan tema XML GtkSourceView sendiri ke <code>gtksourceview-5/styles</code>.</p></div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="grp">
-      <h3>Fitur baru</h3>
-      <ol>
-        <li>
-          Deteksi file tak tertaut.
-        </li>
-        <li>
-          Pembersian atau penghapusan massal catatan yang tak tertaut (orphan files).
-        </li>
-        <li>
-          Pemusatan Tugas / Task belum selesai dari seluruh Cataan dan Jurnal.
-        </li>
-        <li>
-          Pemutar Lagu.
-        </li>
-      </ol>
+<section id="sintaks">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2>Fitur Baru</h2>
+      <p>
+        Versi baru terkadang membawa fitur baru:
+        <br>
+        Dimulai dari v1.2.0:
+        <ul>
+          <li>
+            <h3>Task List</h3>
+            Centralized all uncompleted task in journals and notes in one page. Once you make it as complete file, the task is automatically done on its source.
+            Tampil tugas-tugas yang belum selesai dari seluruh Catatan dan Jurnal pada satu halaman. Ketika anda klik checkbox dari sebuah tugas yang belum selesai di halaman Task List dan merubahnya menjadi tugas yang sudah selesai, maka otomatis di halaman sumbernya juga berubah menjadi tugas yang sudah selesai.
+          </li>
+          <li>
+            <h3>Pembersihan File Orphan</h3>
+            Selain anda dapat menghapus secara satu persatu, anda juga dapat melakukan pembersihan sekaligus seluruh file orphan. File orphan adalah file yang tersimpan di folder <code>Assets</code> anda karena anda sempat mengunggahnya melalui menu Upload File atau Upload Image dan sekarang telah kehilangan status linking nya dengan Catatan atau jurnal manapun. Hal ini terjadi karena link file di Catatan atau jurnal telah dihapus, Jurnal atau Catatan yang berisi link file telah dihapus.
+          </li>
+        
+          <li>
+            <h3>Pemutar Audio</h3>
+            Setelah anda memasukkan file audio ke dalam folder <code>Songs</code>, di dalam folder utama (Main Foler) anda, maka anda dapat memutarnya sambil mengetik atau membuat summary dari rekaman audio kegiatan pengajaran atau sesi meeting. Mendukung file audio dengan format MP3, WAV, FLAC, OPUS.
+          </li>
+        </ul>
+      </p>
     </div>
   </div>
-
-  
 </section>
 
 <section id="sintaks">

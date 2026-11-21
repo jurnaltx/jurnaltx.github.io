@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JurnalTX: Markdown journal and notes-taking desktop application</title>
-<meta name="description" content="JurnalTX is a native desktop journal and notes-taking app with Markdown formatting, note-to-note links, orphan file massive purge or deletion, file uploads, and fast search. Lightweight.">
+<meta name="description" content="JurnalTX is a native desktop journal and notes-taking app with Markdown formatting, note-to-note links, orphan files massive purge or deletion, file uploads, and fast search. Lightweight.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -127,7 +127,7 @@ nav a:hover{color:var(--text)}
 section{padding:84px 0;border-top:1px solid var(--line)}
 .sec-h{max-width:34em;margin-bottom:46px}
 .sec-h h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800}
-.sec-h p{color:var(--mute);margin:14px 0 0}
+.sec-h p, .sec-h li{color:var(--mute);margin:14px 0 0}
 
 /* fitur: baris dengan judul grup di kiri */
 .grp{display:grid;grid-template-columns:240px 1fr;gap:12px 48px;padding:34px 0;border-top:1px solid var(--line)}
@@ -365,30 +365,34 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <div><h4>Custom themes</h4><p>Add your own GtkSourceView XML theme to <code>gtksourceview-5/styles</code>.</p></div>
       </div>
     </div>
-
   </div>
 
 </section>
-
 
 <section id="syntax">
   <div class="wrap">
     <div class="sec-h">
       <h2>New Features</h2>
       <p>
-        <ol>
+        New version sometimes brings new features:
+        <br>
+        Starting from v1.2.0:
+        <ul>
           <li>
-            Centralized all the uncomplete task in one page. Once you make an uncomplete task becomes a complete task, the task is automatically done as well on its source page.
+            <h3>Task List</h3>
+            Centralized all uncompleted task in journals and notes in one page. Once you make it as complete file, the task is automatically done on its source.
           </li>
           <li>
-            Purge massively for the orphan files (orphan files).
+            <h3>Orphan Files Purge</h3>
+            Bulk clean orphaned files. Orphaned files are files stored in your Assets folder because you uploaded them, but now the link status to journals or notes is lost. This happens because the file link was removed from its source page. Or the page containing the file link has been deleted. So, the file loses its link status.
           </li>
+        
           <li>
-            Song player.
+            <h3>Song Player</h3>
+            Once you put the audio files into the <code>Songs</code> folder, under your main folder, you can play it while typing or create a summary of a lecture or a meeting session from an audio record. This feature supports MP3, WAV, FLAC, OPUS.
           </li>
-        </ol>
+        </ul>
       </p>
-      
     </div>
   </div>
 </section>
